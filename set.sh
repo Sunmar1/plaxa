@@ -56,7 +56,7 @@ sudo apt remove -y protobuf-compiler
 curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v25.2/protoc-25.2-linux-x86_64.zip
 
 # Unzip protoc to ~/.local again
-unzip protoc-25.2-linux-x86_64.zip -d $HOME/.local
+unzip -o protoc-25.2-linux-x86_64.zip -d $HOME/.local
 
 # Add protoc to PATH again (no prompt, yes | removed)
 export PATH="$HOME/.local/bin:$PATH"
