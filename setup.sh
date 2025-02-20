@@ -34,4 +34,20 @@ cargo --version
 yes | sudo apt remove -y protobuf-compiler
 yes | curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v25.2/protoc-25.2-linux-x86_64.zip
 yes | sudo apt install unzip
-# ... (continue with your original commands)
+# Remove protobuf-compiler again with yes pipe
+yes | sudo apt remove -y protobuf-compiler
+
+# Download Protocol Buffers v25.2 again with yes pipe
+yes | curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v25.2/protoc-25.2-linux-x86_64.zip
+
+# Unzip protoc to ~/.local again with yes pipe
+yes | unzip protoc-25.2-linux-x86_64.zip -d $HOME/.local
+
+# Add protoc to PATH again with yes pipe
+yes | export PATH="$HOME/.local/bin:$PATH"
+
+# Check protoc version again with yes pipe
+yes | protoc --version
+
+# Install Nexus CLI with yes pipe
+yes | curl https://cli.nexus.xyz/ | sh
