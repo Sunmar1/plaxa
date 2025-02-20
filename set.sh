@@ -2,7 +2,7 @@
 
 # Update package lists and upgrade installed packages
 # Update and upgrade packages, fully automated
-DEBIAN_FRONTEND=noninteractive sudo apt update && echo "1" | sudo apt upgrade -y
+DEBIAN_FRONTEND=noninteractive sudo apt update && sudo apt upgrade -y --force-confnew
 
 # Install essential build tools and dependencies
 sudo apt install build-essential pkg-config libssl-dev git-all -y
